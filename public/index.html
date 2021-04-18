@@ -40,4 +40,54 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    // only for showcase
+    $(document).ready(function(){
+      $('#hide-signup, #hide-loginModal, #hide_fgt-pwd-show_otp, #hide_otp-show_changepwd').click(function(){
+        $('#signupModal').modal('hide');
+        $('#loginModal').modal('hide');
+        $('#forgotpasswordModal').modal('hide');
+        $('#otpmodal').modal('hide');
+      });
+    });
+  </script> 
+    <!-- <script src="assets/plugins/bootstrap-datepicker/datepicker.min.js"></script>BOOTSTRAP.MIN JS    -->
+    <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script><!-- jqueryUi.MIN JS -->   
+    <script src="assets/plugins/slick/slick.min.js"></script><!-- slick SLIDER -->  
+    <script src="assets/js/custom.min.js"></script><!-- CUSTOM FUCTIONS  -->  
+    <script>
+      //cart incremtn
+      function incrementValue() {
+          var value = parseInt(document.getElementById('number').value, 10);
+          value = isNaN(value) ? 0 : value;
+          if (value < 10) {
+              value++;
+              document.getElementById('number').value = value;
+          }
+      }
+      //cart decremtn
+      function decrementValue() {
+          var value = parseInt(document.getElementById('number').value, 10);
+          value = isNaN(value) ? 0 : value;
+          if (value > 1) {
+              value--;
+              document.getElementById('number').value = value;
+              $('.cart-inc-dec').show();
+          } else {
+              $('.cart-inc-dec').hide();
+              $('.item-btn-cart').show();
+          }
+      }
+  
+      $(document).ready(function() {
+  
+        "use strict"; 
+    
+          $('.item-btn-cart').click(function(){
+              $(this).hide();
+              $('.cart-inc-dec').show();
+          });
+      });
+    </script>
 </html>
